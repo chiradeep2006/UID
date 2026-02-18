@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  .table-container {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Rounds the corners of the table */
+    margin: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  thead {
+    background-color: #6366f1; /* Modern Indigo color */
+    color: white;
+  }
+
+  th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #efefff;
+  }
+
+  /* Hover effect for better UX */
+  tbody tr:hover {
+    background-color: #f8fafc;
+    cursor: pointer;
+  }
+
+  /* Styling for a "Status" badge */
+  .badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+  }
+  .active { background-color: #dcfce7; color: #15803d; }
+  .pending { background-color: #fef9c3; color: #854d0e; }
+</style>
+</head>
+<body>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Customer</th>
+        <th>Subscription</th>
+        <th>Status</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Marcos Wright</strong></td>
+        <td>Professional Plan</td>
+        <td><span class="badge active">Active</span></td>
+        <td>$49.00</td>
+      </tr>
+      <tr>
+        <td><strong>Serena Williams</strong></td>
+        <td>Enterprise Plan</td>
+        <td><span class="badge pending">Pending</span></td>
+        <td>$199.00</td>
+      </tr>
+      <tr>
+        <td><strong>David Chen</strong></td>
+        <td>Basic Plan</td>
+        <td><span class="badge active">Active</span></td>
+        <td>$19.00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+</head>
+<body>
+
+    <h2>Get In Touch</h2>
+    <form action="/submit_data" method="POST">
+
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="user_name" placeholder="Enter your name" required>
+        <br><br>
+
+        <p>What is your primary interest?</p>
+        <input type="radio" id="java" name="interest" value="Java">
+        <label for="java">Java Programming</label><br>
+        <input type="radio" id="web" name="interest" value="WebDev">
+        <label for="web">Web Development</label>
+        <br><br>
+
+        <p>Available for (Select all that apply):</p>
+        <input type="checkbox" id="fulltime" name="availability" value="FullTime">
+        <label for="fulltime">Full-time Roles</label><br>
+        <input type="checkbox" id="freelance" name="availability" value="Freelance">
+        <label for="freelance">Freelance Projects</label>
+        <br><br>
+
+        <input type="submit" value="Send Message">
+    </form>
+
+</body>
+</html>

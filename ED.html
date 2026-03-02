@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Education Details Form</title>
+</head>
+<body>
+
+    <h2 id="main-header">Academic Background</h2>
+    <form action="/submit_education" method="POST">
+
+        <label for="college">University/College Name:</label><br>
+        <input type="text" id="college" name="college_name" placeholder="e.g. Amrita Vishwa Vidyapeetham" required>
+        <br><br>
+
+        <label for="degree">Degree Obtained:</label><br>
+        <select id="degree" name="degree_type">
+            <option value="highschool">High School</option>
+            <option value="diploma">Diploma</option>
+            <option value="btech">B.Tech / B.E.</option>
+            <option value="mtech">M.Tech / M.E.</option>
+        </select>
+        <br><br>
+
+        <p>Graduation Status:</p>
+        <input type="radio" id="completed" name="status" value="completed">
+        <label for="completed">Completed</label>
+        <input type="radio" id="pursuing" name="status" value="pursuing">
+        <label for="pursuing">Pursuing</label>
+        <br><br>
+
+        <p>Core Subjects Mastered:</p>
+        <input type="checkbox" id="discrete" name="subject" value="DiscreteMath">
+        <label for="discrete">Discrete Mathematics</label><br>
+        <input type="checkbox" id="java" name="subject" value="Java">
+        <label for="java">Java Programming</label><br>
+        <input type="checkbox" id="webdev" name="subject" value="WebDev">
+        <label for="webdev">Web Development</label>
+        <br><br>
+
+        <label for="gpa">Grade Point Average (GPA):</label><br>
+        <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="10" placeholder="0.00">
+        <br><br>
+
+        <input type="submit" value="Save Education Details">
+    </form>
+
+</body>
+</html>

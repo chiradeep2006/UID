@@ -1,0 +1,36 @@
+<form action="/submit-form" method="POST">
+  <div style="margin-bottom: 15px;">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="John Doe" required>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="subject">Subject:</label><br>
+    <select id="subject" name="subject">
+      <option value="general">General Inquiry</option>
+      <option value="support">Technical Support</option>
+      <option value="billing">Billing</option>
+    </select>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <p>Preferred Contact Method:</p>
+    <input type="radio" id="contact_email" name="contact_pref" value="email" checked>
+    <label for="contact_email">Email</label>
+    
+    <input type="radio" id="contact_phone" name="contact_pref" value="phone">
+    <label for="contact_phone">Phone</label>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="30"></textarea>
+  </div>
+
+  <button type="submit">Send Message</button>
+</form>

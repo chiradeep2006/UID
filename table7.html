@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Data Table</title>
+    <style>
+        /* General Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merges borders into a single line */
+            font-family: Arial, sans-serif;
+            margin: 20px 0;
+        }
+
+        /* Styling for Headers */
+        th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        /* Styling for Data Cells */
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Zebra Striping for better readability */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Hover effect */
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Project Team Directory</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Alex Rivera</td>
+                <td>Lead Developer</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Sarah Chen</td>
+                <td>UI/UX Designer</td>
+                <td>On Leave</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>James Wilson</td>
+                <td>Project Manager</td>
+                <td>Active</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Total Members: 3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

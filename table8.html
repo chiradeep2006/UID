@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Table Example</title>
+    <style>
+        /* Modern Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Removes gaps between borders */
+            font-family: sans-serif;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Header background */
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Zebra striping: colors every even row */
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Hover effect to highlight the current row */
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Product Inventory</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Item Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#101</td>
+                <td>Wireless Mouse</td>
+                <td>Accessories</td>
+                <td>$25.00</td>
+            </tr>
+            <tr>
+                <td>#102</td>
+                <td>Mechanical Keyboard</td>
+                <td>Hardware</td>
+                <td>$85.00</td>
+            </tr>
+            <tr>
+                <td>#103</td>
+                <td>USB-C Hub</td>
+                <td>Accessories</td>
+                <td>$45.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Total Items</strong></td>
+                <td><strong>3</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

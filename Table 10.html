@@ -1,0 +1,38 @@
+<style>
+  table, th, td {
+    border: 1px solid black;
+    /* Collapses the borders into a single line */
+    border-collapse: collapse; 
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+
+<table>
+  <caption>Monthly Sales Data</caption> <!-- Adds a caption/title for accessibility -->
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Sales</th>
+      <th>Expenses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$5,000</td>
+      <td>$3,000</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$3,500</td>
+      <td>$2,200</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Total (Jan-Feb)</td> <!-- Merges two cells horizontally -->
+      <td>$5,200</td>
+    </tr>
+  </tfoot>
+</table>

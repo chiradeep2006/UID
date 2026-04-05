@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>String Math Date</title>
+</head>
+<body>
+<label>Enter String:</label>
+<input type="text" id="str"><br><br>
+<label>Enter Number:</label>
+<input type="number" id="num"><br><br>
+<input type="button" value="Run" onclick="run()">
+<p id="out"></p>
+<script>
+function run(){
+let s=document.getElementById("str").value;
+let n=parseFloat(document.getElementById("num").value);
+let upper=s.toUpperCase();
+let lower=s.toLowerCase();
+let length=s.length;
+let slice=s.slice(0,3);
+let sqrt=Math.sqrt(n);
+let power=Math.pow(n,2);
+let ceil=Math.ceil(n);
+let floor=Math.floor(n);
+let d=new Date();
+let date=d.getDate();
+let month=d.getMonth()+1;
+let year=d.getFullYear();
+let day=d.getDay();
+document.getElementById("out").innerHTML=
+"Upper: "+upper+"<br>"+
+"Lower: "+lower+"<br>"+
+"Length: "+length+"<br>"+
+"Slice: "+slice+"<br>"+
+"Sqrt: "+sqrt+"<br>"+
+"Power: "+power+"<br>"+
+"Ceil: "+ceil+"<br>"+
+"Floor: "+floor+"<br>"+
+"Date: "+date+"/"+month+"/"+year+"<br>"+
+"Day: "+day;
+}
+</script>
+</body>
+</html>

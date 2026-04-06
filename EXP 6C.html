@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calendar</title>
+<style>
+body{font-family:Arial;text-align:center}
+#cal{width:300px;margin:auto;border:1px solid black;padding:10px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid black;padding:5px}
+button{margin:5px}
+.today{background:orange;color:white;font-weight:bold}
+</style>
+</head>
+<body>
+<div id="cal">
+<button onclick="prev()">◀</button>
+<label id="title"></label>
+<button onclick="next()">▶</button>
+<table>
+<thead>
+<tr>
+<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+</tr>
+</thead>
+<tbody id="body"></tbody>
+</table>
+</div>
+<script>
+let now=new Date();
+let currentDate=now.getDate();
+let currentMonth=now.getMonth();
+let currentYear=now.getFullYear();
+let m=currentMonth;
+let y=currentYear;
+function render(){
+let months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+document.getElementById("title").innerHTML=months[m]+" "+y;
+let first=new Date(y,m,1).getDay();
+let last=new Date(y,m+1,0).getDate();
+let html="";
+let date=1;
+for(let i=0;i<6;i++){
+html+="<tr>";
+for(let j=0;j<7;j++){
+if(i==0 && j<first){
+html+="<td></td>";
+}else if(date>last){
+html+="<td></td>";
+}else{
+if(date==currentDate && m==currentMonth && y==currentYear){
+html+="<td class='today'>"+date+"</td>";
+}else{
+html+="<td>"+date+"</td>";
+}
+date++;
+}
+}
+html+="</tr>";
+}
+document.getElementById("body").innerHTML=html;
+}
+function prev(){
+m--;
+if(m<0){m=11;y--;}
+render();
+}
+function next(){
+m++;
+if(m>11){m=0;y++;}
+render();
+}
+render();
+</script>
+</body>
+</html>

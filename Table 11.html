@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Modern Table Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border-radius: 8px 8px 0 0;
+            overflow: hidden; /* Ensures rounded corners show */
+        }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+            background-color: white;
+        }
+
+        /* Zebra Striping */
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        /* Hover effect */
+        .styled-table tbody tr:hover {
+            background-color: #f1f7f6;
+            cursor: pointer;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        /* Status Styling */
+        .status {
+            font-weight: bold;
+            color: #009879;
+        }
+    </style>
+    <title>Modern HTML Table</title>
+</head>
+<body>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dominic</td>
+                <td>88,110</td>
+                <td class="status">Active</td>
+            </tr>
+            <tr>
+                <td>Melissa</td>
+                <td>51,500</td>
+                <td class="status">Active</td>
+            </tr>
+            <tr>
+                <td>Sarah</td>
+                <td>34,200</td>
+                <td class="status">Inactive</td>
+            </tr>
+            <tr>
+                <td>James</td>
+                <td>12,800</td>
+                <td class="status">Active</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

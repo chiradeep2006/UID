@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Page Setup */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Table Container Style */
+        .table-container {
+            width: 80%;
+            max-width: 800px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        /* Header Styling */
+        thead tr {
+            background-color: #6c5ce7;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        th, td {
+            padding: 15px 20px;
+        }
+
+        /* Row Border and Hover */
+        tbody tr {
+            border-bottom: 1px solid #edf2f7;
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9ff;
+        }
+
+        /* Status Badge Styling */
+        .badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .done { background: #d1fae5; color: #065f46; }
+        .pending { background: #fef3c7; color: #92400e; }
+        .alert { background: #fee2e2; color: #991b1b; }
+
+    </style>
+    <title>Modern Data Table</title>
+</head>
+<body>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Deadline</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Website Redesign</td>
+                    <td>Oct 12, 2023</td>
+                    <td>High</td>
+                    <td><span class="badge done">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Mobile App API</td>
+                    <td>Nov 05, 2023</td>
+                    <td>Medium</td>
+                    <td><span class="badge pending">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Security Audit</td>
+                    <td>Oct 20, 2023</td>
+                    <td>Critical</td>
+                    <td><span class="badge alert">Delayed</span></td>
+                </tr>
+                <tr>
+                    <td>SEO Optimization</td>
+                    <td>Dec 01, 2023</td>
+                    <td>Low</td>
+                    <td><span class="badge pending">In Progress</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

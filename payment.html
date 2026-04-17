@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Chira's Turf</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar .nav-links a.active { color: var(--text-primary); border: none; }
+        .navbar .nav-links a.active::after { width: 0; }
+        .success-message {
+            display: none;
+            text-align: center;
+            color: #4ade80;
+            margin-top: 2rem;
+            padding: 2rem;
+            border: 2px solid #4ade80;
+            border-radius: 8px;
+            background: rgba(74, 222, 128, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container flex items-center justify-between">
+            <div class="nav-left">
+                <a href="login.html" class="btn">Logout</a>
+                <a href="index.html" class="brand-logo">CHIRA'S <span>TURF</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="login.html">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="auth-container">
+        <div class="auth-wrapper">
+            <div class="forms-box">
+                <form id="payment-form" class="form-content" style="display: block;" onsubmit="event.preventDefault(); document.getElementById('payment-form').style.display = 'none'; document.getElementById('success-message').style.display = 'block';">
+                    <div class="auth-header">
+                        <h2>Secure <span>Payment</span></h2>
+                        <p style="color:var(--text-secondary);">Complete your purchase to secure your plan.</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-name">Name on Card</label>
+                        <input type="text" id="card-name" class="form-control" placeholder="e.g. Cristiano Ronaldo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" class="form-control" placeholder="0000 0000 0000 0000" pattern="\d{16}" required title="16 digit card number">
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="expiry">Expiry</label>
+                            <input type="text" id="expiry" class="form-control" placeholder="MM/YY" required pattern="\d\d/\d\d" title="MM/YY format">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="cvv">CVV</label>
+                            <input type="password" id="cvv" class="form-control" placeholder="123" required pattern="\d{3,4}" title="3 or 4 digit security code">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Pay Now</button>
+                    <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        Green borders indicate valid input. Red is invalid.
+                    </p>
+                </form>
+
+                <div id="success-message" class="success-message">
+                    <h2>Payment was successful!</h2>
+                    <p style="margin-top: 1rem; font-size: 1.2rem;">You are a member in this turf.</p>
+                    <a href="index.html" class="btn btn-primary" style="margin-top: 2rem;">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

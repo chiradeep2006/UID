@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Gallery - Chira's Watches</title>
-    <meta name="description" content="Browse our luxury watch collections. A curated gallery of the finest mechanical, analog, and minimalist timepieces.">
+    <title>Facilities & Kits - Chira's Turf</title>
+    <meta name="description" content="View our pristine turf pitches and top-tier sports kits available for rent.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,16 +12,15 @@
     
     <nav class="navbar">
         <div class="container flex items-center justify-between">
-            
             <div class="nav-left">
                 <a href="login.html" class="btn">Logout</a>
-                <a href="index.html" class="brand-logo">CHIRA'S</a>
+                <a href="index.html" class="brand-logo">CHIRA'S <span>TURF</span></a>
             </div>
-            
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="membership.html">Membership</a></li>
                 <li><a href="login.html">Sign In</a></li>
             </ul>
         </div>
@@ -29,50 +28,84 @@
 
    
     <section class="container">
-        <div class="gallery-header">
-            <h2>The Collection</h2>
-            <p>Explore our exclusive selection of meticulously crafted timepieces.</p>
+        <div class="page-header">
+            <h2>Our <span>Grounds & Gear</span></h2>
+            <p>Explore the pristine pitches and premium kits we provide.</p>
         </div>
-
         <div class="gallery-grid">
-            
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=600" alt="Rose Gold Classic Analog">
-                <div class="gallery-info">
-                    <h3>The Rose Gold Classic</h3>
-                    <p>4,500.00</p>
+                <img src="https://images.unsplash.com/photo-1614632537190-23e4146777db?auto=format&fit=crop&q=80&w=600" alt="Training Bibs and Cones">
+                <div class="gallery-overlay">
+                    <h3>Training Equipment Sets</h3>
+                </div>
+                <div class="gallery-description" style="display: none;">
+                    Football training equipment is essential for players to improve agility, speed, and passing accuracy. High-quality bibs and cones allow for organized drills and competitive practices that simulate real match scenarios.
                 </div>
             </div>
-
+            
            
-                       
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&q=80&w=600" alt="The Obsidian Diver">
-                <div class="gallery-info">
-                    <h3>The Obsidian Diver</h3>
-                    <p>4,100.00</p>
+                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=600" alt="Football Boots">
+                <div class="gallery-overlay">
+                    <h3>Premium Cleat Rentals</h3>
+                </div>
+                <div class="gallery-description" style="display: none;">
+                    Cleats are the most important piece of gear for any football player. Designed to provide optimal traction and support, our premium rentals ensure that you can make sharp turns and strike with precision on the turf pitch.
                 </div>
             </div>
 
             
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=600" alt="Vintage Leather Timepiece">
-                <div class="gallery-info">
-                    <h3>Vintage Leather Edition</h3>
-                    <p>2,950.00</p>
+                <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&q=80&w=600" alt="Goalkeeper Gloves">
+                <div class="gallery-overlay">
+                    <h3>Goalkeeper Gear</h3>
                 </div>
-            </div>
-
-            
-            <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&q=80&w=600" alt="Silver Mesh Heritage">
-                <div class="gallery-info">
-                    <h3>Silver Mesh Heritage</h3>
-                    <p>3,600.00</p>
+                <div class="gallery-description" style="display: none;">
+                    Goalkeepers are the last line of defense in football. To perform at their best, they need excellent grip and finger protection. This gear helps prevent injuries and enhances the keeper’s ability to secure the ball safely during powerful shots.
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg" alt="Enlarged View">
+        <div id="caption" class="modal-caption"></div>
+        <div id="modalDescription" class="modal-description"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImg");
+            const captionText = document.getElementById("caption");
+            const cards = document.querySelectorAll(".gallery-card");
+
+            cards.forEach(card => {
+                card.addEventListener("click", () => {
+                    const img = card.querySelector("img");
+                    const title = card.querySelector("h3").innerText;
+                    const desc = card.querySelector(".gallery-description").innerHTML;
+                    
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                    captionText.innerHTML = title;
+                    document.getElementById("modalDescription").innerHTML = desc;
+                });
+            });
+
+            const span = document.querySelector(".close-modal");
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
+            
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
 </body>
 </html>

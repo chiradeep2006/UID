@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>7-a</title> 
+<script> 
+function validateForm() { 
+let name = document.getElementById("name").value; 
+let email = document.getElementById("email").value; 
+let password = document.getElementById("password").value; 
+let confirmPassword = document.getElementById("confirmPassword").value; 
+let phone = document.getElementById("phone").value; 
+if (name === "" || email === "" || password === "" || confirmPassword === "" 
+|| phone === "") { 
+alert("All fields must be filled!"); 
+return false; 
+} 
+if (!email.includes("@") || !email.includes(".")) { 
+alert("Enter a valid email!"); 
+return false; 
+} 
+if (password !== confirmPassword) { 
+alert("Passwords do not match!"); 
+return false; 
+} 
+if (phone.length !== 10 || isNaN(phone)) { 
+alert("Enter a valid 10-digit phone number!"); 
+return false; 
+} 
+alert("Registration Successful!"); 
+return true; 
+} 
+</script> 
+</head> 
+<body> 
+<h2>Registration Form</h2> 
+<form onsubmit="return validateForm()"> 
+<label>Full Name:</label><br> 
+<input type="text" id="name"><br><br> 
+<label>Email:</label><br> 
+<input type="text" id="email"><br><br> 
+<label>Password:</label><br> 
+<input type="password" id="password"><br><br> 
+<label>Confirm Password:</label><br> 
+<input type="password" id="confirmPassword"><br><br> 
+<label>Phone Number:</label><br> 
+<input type="text" id="phone"><br><br> 
+<label>Gender:</label><br> 
+<input type="radio" name="gender"> Male 
+<input type="radio" name="gender"> Female<br><br> 
+<input type="submit" value="Register"> 
+</form> 
+</body> 
+</html>

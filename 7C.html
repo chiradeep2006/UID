@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>7-c</title> 
+<script> 
+function changeColor() { 
+document.getElementById("box").style.backgroundColor = "red"; 
+} 
+function resetColor() { 
+document.getElementById("box").style.backgroundColor = "black"; 
+} 
+</script> 
+</head> 
+<body> 
+<h2>Mouse Hover Effect</h2> 
+<div id="box" 
+onmouseover="changeColor()" 
+onmouseout="resetColor()" 
+style="width:200px; height:100px; background-color:lightblue; textalign:center; line-height:100px;"> 
+Hover Me 
+</div> 
+</body> 
+</html>

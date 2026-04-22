@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>7-d</title> 
+<script> 
+function checkAnswers() { 
+let score = 0; 
+let q1 = document.querySelector('input[name="q1"]:checked'); 
+let q2 = document.querySelector('input[name="q2"]:checked'); 
+let q3 = document.querySelector('input[name="q3"]:checked'); 
+if (!q1 || !q2 || !q3) { 
+alert("Please answer all questions!"); 
+return;} 
+if (q1.value === "HTML") { 
+score++;} 
+if (q2.value === "CSS") { 
+score++;} 
+if (q3.value === "JavaScript") { 
+score++;} 
+document.getElementById("result").innerHTML = 
+"Your Score: " + score + " / 3";} 
+</script> 
+</head> 
+<body> 
+<h2>Online Exam</h2> 
+<form> 
+<p>1. What is HTML and what does it stand for? </p> 
+<input type="radio" name="q1" value="HTML"> HYPER TEST ML<br> 
+<input type="radio" name="q1" value="CSS"> CASCADING STYLE SHEET<br> 
+<input type="radio" name="q1" value="JavaScript"> JavaScript<br><br> 
+<p>2. Which language is used for styling web pages?</p> 
+<input type="radio" name="q2" value="HTML"> HTML<br> 
+<input type="radio" name="q2" value="CSS"> CSS<br> 
+<input type="radio" name="q2" value="JavaScript"> JavaScript<br><br> 
+<p>3. Which language is used for interactivity?</p> 
+<input type="radio" name="q3" value="HTML"> HTML<br> 
+<input type="radio" name="q3" value="CSS"> CSS<br> 
+<input type="radio" name="q3" value="JavaScript"> JavaScript<br><br> 
+<button type="button" onclick="checkAnswers()">Submit</button> 
+</form> 
+<br> 
+<h3 id="result"></h3> 
+</body> 
+</html> 

@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>7-e</title> 
+<script> 
+let size = 20; 
+let growing = true; 
+function changeTextSize() { 
+let text = document.getElementById("myText"); 
+if (growing) { 
+size += 2; 
+if (size >= 50) { 
+growing = false; // start shrinking 
+} 
+} else { 
+size -= 2; 
+if (size <= 20) { 
+growing = true; // start growing again 
+} 
+} 
+text.style.fontSize = size + "px"; 
+} 
+setInterval(changeTextSize, 200); 
+</script> 
+</head> 
+<body> 
+<h2 id="myText">Hello World!</h2> 
+</body> 
+</html>

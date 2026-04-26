@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chira's Turf - Schedules</title>
+    <style>
+        /* Basic styling to match your 'style.css' themes */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: 'Roboto', sans-serif;
+            color: #f0fdf4; /* Matches your --text-primary */
+            background-color: rgba(34, 197, 94, 0.05); /* Matches your --surface */
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid rgba(34, 197, 94, 0.2); /* Matches your --surface-border */
+            text-align: left;
+        }
+        th {
+            background-color: #22c55e; /* Matches your --accent-primary */
+            color: #0a0f0d; /* Matches your --bg-dark */
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+        tr:hover {
+            background-color: rgba(74, 222, 128, 0.1); /* Hover effect */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Weekly <span>Match Schedule</span></h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time Slot</th>
+                <th>Pitch Type</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>06:00 PM - 08:00 PM</td>
+                <td>Alpha Pitch (11v11)</td>
+                <td>Booked</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>08:00 PM - 10:00 PM</td>
+                <td>Beta Pitch (5v5)</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>09:00 PM - 11:00 PM</td>
+                <td>Alpha Pitch (11v11)</td>
+                <td>Available</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Note: All slots include access to locker rooms.</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

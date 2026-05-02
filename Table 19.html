@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional HTML Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Prevents double borders */
+            font-family: Arial, sans-serif;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+        }
+        /* Highlights row on hover */
+        tr:hover {
+            background-color: #f1f1f1; 
+        }
+        /* Zebra striping for better readability */
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Project Name</th>
+                <th>Status</th>
+                <th>Deadline</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#001</td>
+                <td>Portfolio Website</td>
+                <td>In Progress</td>
+                <td>May 15</td>
+            </tr>
+            <tr>
+                <td>#002</td>
+                <td>Java OOP Lab</td>
+                <td>Completed</td>
+                <td>April 20</td>
+            </tr>
+            <tr>
+                <td>#003</td>
+                <td>Technical Presentation</td>
+                <td>Pending</td>
+                <td>June 02</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

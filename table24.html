@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional HTML Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Prevents double borders */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        /* Zebra striping for better readability */
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        /* Highlights row on hover */
+        tr:hover {
+            background-color: #f1f1f1; 
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Project Management Dashboard</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Task ID</th>
+                <th>Task Name</th>
+                <th>Assignee</th>
+                <th>Priority</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#1001</td>
+                <td>Data Cleaning Script</td>
+                <td>Alex Rivera</td>
+                <td>High</td>
+            </tr>
+            <tr>
+                <td>#1002</td>
+                <td>Model Training</td>
+                <td>Sam Chen</td>
+                <td>Medium</td>
+            </tr>
+            <tr>
+                <td>#1003</td>
+                <td>Final Documentation</td>
+                <td>Jordan Smyth</td>
+                <td>Low</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
